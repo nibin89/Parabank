@@ -1,4 +1,4 @@
-Parabank Automation Testing with Playwright
+#Parabank Automation Testing with Playwright
 This repository contains an automated testing framework for ParaBank, a demo banking application. Built with Microsoft Playwright, this project ensures fast, reliable, and cross-browser test automation with modern best practices.
 
 Key Features
