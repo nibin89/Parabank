@@ -1,56 +1,44 @@
-#Parabank Automation Testing with Playwright
-This repository contains an automated testing framework for ParaBank, a demo banking application. Built with Microsoft Playwright, this project ensures fast, reliable, and cross-browser test automation with modern best practices.
+# 🏦 Parabank Automation Testing with Playwright 🚀
 
-Key Features
-✅ Fast & Reliable Testing – Playwright’s auto-waits and built-in retries ensure stable test execution.
-✅ Multi-Browser Support – Run tests on Chromium, Firefox, and WebKit with a single script.
-✅ End-to-End Coverage – Automated UI & API tests for critical banking workflows.
-✅ CI/CD Ready – Works seamlessly with GitHub Actions, Jenkins, or Azure DevOps.
-✅ Allure/HTML Reports – Detailed test reports for better debugging and analysis.
-✅ Page Object Model (POM) – Scalable and maintainable test architecture.
-✅ Parallel Execution – Run tests in parallel for faster feedback.
+![Playwright](https://img.shields.io/badge/Playwright-2E3A8C?style=for-the-badge&logo=playwright)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
-Test Coverage
-🏦 User Authentication (Registration, Login, Password Recovery)
+Automated testing framework for **ParaBank** (demo banking app) using **Microsoft Playwright** for fast, reliable cross-browser testing.
 
-💸 Account Transactions (Transfers, Deposits, Withdrawals)
+## ✨ Key Features
+- **Blazing fast execution** with Playwright's direct browser communication
+- **True cross-browser testing** (Chromium, Firefox, WebKit)
+- **Full-stack testing** (UI + API in single framework)
+- **Auto-waiting & retries** eliminate flaky tests
+- **Parallel test execution** out-of-the-box
+- **Visual regression testing** capabilities
+- **CI/CD ready** (GitHub Actions/Jenkins/Azure DevOps)
 
-📊 Bill Payments & Account Services
+## 🧪 Test Coverage
+| Module               | Features Verified |
+|----------------------|-------------------|
+| **User Authentication** | Registration, Login, Password Recovery |
+| **Account Operations**  | Transfers, Deposits, Withdrawals |
+| **Bill Payments**       | Scheduled payments, Payee management |
+| **Account Services**    | Statements, Transaction History |
+| **Error Handling**      | Form validations, Edge cases |
 
-⚠️ Error Handling & Form Validations
+## 🛠️ Tech Stack
+- **Automation**: [Playwright](https://playwright.dev/) (v1.40+)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Reporting**: [Allure Report](https://docs.qameta.io/allure/) + Playwright HTML
+- **CI/CD**: [GitHub Actions](https://github.com/features/actions)
+- **Package Manager**: npm
 
-Technologies Used
-Playwright (Modern browser automation)
+## 🚀 Quick Start
 
-TypeScript/JavaScript (Programming language)
+### Prerequisites
+- Node.js v16+
+- npm v8+
 
-Playwright Test Runner (Built-in test runner)
-
-Allure Report (Detailed test reporting)
-
-GitHub Actions (CI/CD pipeline)
-
-Getting Started
-Clone the repo
-
-sh
+### Installation
+```bash
 git clone https://github.com/your-repo/parabank-playwright.git
-Install dependencies
-
-sh
+cd parabank-playwright
 npm install
-Run tests
-
-sh
-npx playwright test
-View reports
-
-sh
-npx playwright show-report
-Contributions welcome! 🚀 Open to bug reports, feature requests, and improvements.
-
-Why Playwright?
-✔ Faster execution than Selenium (no WebDriver overhead)
-✔ Auto-waiting & retries reduce flaky tests
-✔ Native mobile emulation & geolocation testing
-✔ Built-in API testing (no separate HTTP client needed)
