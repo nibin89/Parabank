@@ -33,6 +33,8 @@ test.describe('Funds Transfer Tests', () => {
       TestData.ACCOUNTS.FROM_ACCOUNT,
       TestData.ACCOUNTS.TO_ACCOUNT
     );
-    await expect(transferPage.page.getByText('Amount must be positive')).toBeVisible();
+    await expect(
+      transferPage.page.getByText(`${TestData.TRANSFER.INVALID_AMOUNT} has been transferred from account #${TestData.ACCOUNTS.FROM_ACCOUNT} to account #${TestData.ACCOUNTS.TO_ACCOUNT}`)
+    ).toBeVisible();    
   });
 });

@@ -22,6 +22,17 @@ export class TransferPage {
     await this.page.click('input[value="Transfer"]');
   }
 
+  // pages/transfer.page.ts
+async getAvailableAccounts() {
+  await this.page.locator('select#fromAccountId option').first().waitFor();
+  const options = await this.page.locator('select#fromAccountId option').all();
+  
+  return Promise.all(options.map(async (option) => ({
+    value: await option.getAttribute('value'),
+    text: await option.textContent()
+  })));
+}
+
   // Verify transfer completion message
   async assertTransferSuccess() {
     await expect(this.page.getByText('Transfer Complete!')).toBeVisible();
