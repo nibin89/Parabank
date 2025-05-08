@@ -9,6 +9,11 @@ test.describe('Accounts Page Tests', () => {
   let accountsPage: AccountsPage;
 
   test.beforeEach(async ({ page }) => {
+    test.info().annotations.push({
+      type: 'setup',
+      description: 'Logging in before each test'
+    });
+    
     loginPage = new LoginPage(page);
     accountsPage = new AccountsPage(page);
     await loginPage.navigate();
@@ -16,9 +21,13 @@ test.describe('Accounts Page Tests', () => {
   });
 
   test('Verify accounts overview displays correctly', async () => {
+    test.info().annotations.push(
+      { type: 'test_id', description: 'ACC-001' },
+      { type: 'severity', description: 'critical' }
+    );
     await accountsPage.navigateToAccountsOverview();
     await accountsPage.assertAccountsVisible();
-  });
+    });
 
   test('View account details for first available account', async () => {
     await accountsPage.navigateToAccountsOverview();
